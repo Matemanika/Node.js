@@ -12,9 +12,9 @@ app.use(
 )
 
 app.get('/', (request, response) => {
-    response.json({ info: 'Node.js, Express, and Postgres API' })
-})
-
+        response.json({ info: 'Node.js, Express, and Postgres API' })
+    })
+    //test
 app.get('/geometry', db.getUsers)
 app.get('/geometry/:id', db.getUserById)
 app.post('/geometry', db.createUser)

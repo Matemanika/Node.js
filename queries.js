@@ -7,14 +7,14 @@ const pool = new Pool({
     port: 5432,
 })
 const getUsers = (request, response) => {
-    pool.query('SELECT * FROM geometry ORDER BY id ASC', (error, results) => {
-        if (error) {
-            throw error
-        }
-        response.status(200).json(results.rows)
-    })
-}
-
+        pool.query('SELECT * FROM geometry ORDER BY id ASC', (error, results) => {
+            if (error) {
+                throw error
+            }
+            response.status(200).json(results.rows)
+        })
+    }
+    //test
 const getUserById = (request, response) => {
     const id = parseInt(request.params.id)
 
